@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Video</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .instructions {
+            background-color: #ffe;
+            padding: 15px;
+            border-left: 5px solid #ff9800;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Upload Video for Detection</h2>
+
+    <div class="instructions">
+        <strong>How to upload:</strong>
+        <p>Upload a video file (MP4, AVI). The system will extract frames and analyze temporal inconsistencies to
+            identify face swaps or reenactments.</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="video/*" required>
+        <br><br>
+        <button type="submit">Analyze Video</button>
+    </form>
+
+    <a href="/">&larr; Back to Home</a>
+</body>
+
+</html>
